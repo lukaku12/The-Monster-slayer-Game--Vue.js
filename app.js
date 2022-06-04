@@ -6,7 +6,15 @@ const app = Vue.createApp({
     data() {
         return {
             playerHealth: 100,
-            monsterHealth: 100,    
+            monsterHealth: 100,
+        }
+    },
+    computed: {
+        mosterBarStyles() {
+            return { width: this.monsterHealth + '%' }
+        },
+        playerBarStyles() {
+            return { width: this.playerHealth + '%' }
         }
     },
     methods: {
